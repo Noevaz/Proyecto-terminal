@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import imagenes from './assets/imagenes';
 
 export default function App() {
 	const questions = [
@@ -737,6 +738,7 @@ export default function App() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
+	const[currentImage, setCurrentImage] = useState(0);
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
@@ -749,6 +751,11 @@ export default function App() {
 		} else {
 			setShowScore(true);
 		}
+
+		const nextImage = currentImage + 1;
+        if (nextImage < questions.length) {
+            setCurrentImage(nextImage);
+        }
 	};
 	return (
 		<div className='app'>
@@ -763,6 +770,7 @@ export default function App() {
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
 						</div>
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
+						<img src={imagenes[currentImage]}></img>
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
