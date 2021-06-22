@@ -21,8 +21,8 @@ body {
 
 .app {
   background-color: #252d4a;
-  width: 450px;
-  min-height: 200px;
+  width: 800px;
+  min-height: 400px;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
@@ -35,6 +35,14 @@ body {
   display: flex;
   font-size: 24px;
   align-items: center;
+}
+
+.imagen-juego {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
@@ -70,17 +78,19 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 button {
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
   color: #ffffff;
   background-color: #252d4a;
-  border-radius: 15px;
+  border-radius: 20px;
   display: flex;
-  padding: 5px;
-  justify-content: flex-start;
+  padding: 20px;
+  margin-top: 20px;
+  justify-content: center;
   align-items: center;
   border: 5px solid #234668;
   cursor: pointer;
