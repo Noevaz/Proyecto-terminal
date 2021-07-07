@@ -1,0 +1,13 @@
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+};
+
+.titulo {
+    display:flex;
+    justify-content: center;
+  };
